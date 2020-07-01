@@ -15,3 +15,8 @@ const arreglo3 = arreglo2.map(function(numero){
 console.log(arreglo);
 console.log(arreglo2);
 console.log(arreglo3);
+
+
+function () {
+    
+}
