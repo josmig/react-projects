@@ -27,7 +27,7 @@ function App() {
         <Adios/>        <Persona/> */}
         {/* <Saludar name="Miguel Pantigoso" 
                  edad="22" /> */}
-        <Saludar userInfo={user} saludarFm={saludarFm} />
+        <Saludar userInfo={user} saludo={saludarFm} />
       </header>
     </div>
   );
