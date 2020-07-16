@@ -15,8 +15,9 @@ function App() {
     sexo: 'Masculino'
   }
 
-  const saludarFm = name => {
-    console.log("Hola" + name);
+  const saludarFm = (name , edad) => {
+    console.log("Hola " + name + "tiene " + edad + " años");
+    console.log(`Hola ${name}, tengo ${edad} años.`);
   }
 
   return (
