@@ -1,8 +1,10 @@
 import React from 'react'
 
-const Footer = () => (
+//aplicando destructuring para jalar de los props
+
+const Footer = ({fecha}) => (
         <footer>
-            <p>Todos los derechos reservados &copy;</p>
+            <p>Todos los derechos reservados &copy; {fecha}</p>
         </footer>
     );
 
