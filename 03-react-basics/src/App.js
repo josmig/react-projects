@@ -1,11 +1,18 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import Footer from './components/Footer';
 import Header from './components/Header';
 
+/* En vez de crear un div por defecto* mejor usamos Fragment */
 function App() {
-  return (
-    <div className="App">      
+
+  {/* <div className="App">      
+    </div> */}
+
+  return (    
+    <Fragment>
         <Header />
-    </div>
+        <Footer />    
+    </Fragment>    
   );
 }
 
