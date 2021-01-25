@@ -2,7 +2,7 @@ import React, { Fragment, useState } from 'react';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Producto from './components/Producto';
-
+import Carrito from './components/Carrito';
 
 /* En vez de crear un div por defecto* mejor usamos Fragment */
 function App() {
@@ -45,8 +45,10 @@ function App() {
               />
             ))}                      
         </div>
-
-
+        <Carrito 
+          carrito = {carrito}
+          agregarProducto = {agregarProducto}
+        />
         <Footer 
           fecha={fecha}
         />    

@@ -9,20 +9,41 @@ const Producto = ({producto,carrito,agregarProducto,productos}) => {
     const seleccionarProducto = id => {
         /* console.log('comprando...', id); */
         const add = productos.filter(p => p.id === id )[0]
+        //usamos el metodo que viene con el state para agregar al carro
         agregarProducto([
-            ...carrito,
-            add
+            ...carrito, //hacemos una copia para agregar y que no se borre el producto
+            add //agregamos el producto seleccionado
         ])
-        /* console.log(add); */
+        /* console.log(add); */        
+    }
+    //eliminar producto
+    const eliminarProducto= id =>{
+        const productos  = carrito.filter(p => producto.id !== id)
+        //Colocar los productos en el state
+        agregarProducto(productos)
     }
     return (     
         <div>
-            <h2>El producto {nombre} tiene un precio de {precio}</h2>
-            <button 
-                type="button"
-                onClick={ ()=> seleccionarProducto(id)}
+            <p>{nombre}</p>
+            <p>${precio}</p>
 
-            >Comprar</button>
+            { productos
+            ?
+                (
+                    <button 
+                    type="button"
+                    onClick={ ()=> seleccionarProducto(id)}
+                    >Comprar</button>
+                )
+            :
+                (
+                    <button 
+                    type="button"
+                    onClick={ ()=> eliminarProducto(id)}    
+                    >Eliminar</button>   
+                )
+            }
+            
 
         </div>
     );
